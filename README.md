@@ -15,11 +15,10 @@ This package provides validators for the following countries:
 The easiest way to use the package is as follows.
 
 ```typescript
-import { ValidatorFactory } from './validator.factory';
-import { ValidatorInterface } from './validator.interface';
+import { ValidatorFactory } from '@randock/license-plate-validator';
 
 // obtain a validator instance
-const validator: ValidatorInterface = ValidatorFactory.forCountry('NL');
+const validator = ValidatorFactory.forCountry('NL');
 
 // validate license plate
 const valid: boolean = validator.validate('XX-YY-ZZ'); // true
