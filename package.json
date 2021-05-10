@@ -1,8 +1,8 @@
 {
-  "name": "license-plate-validator",
+  "name": "@randock/license-plate-validator",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.23",
