@@ -10,7 +10,7 @@ const patterns = [
     },
   },
   {
-    regexp: /^((?=.*\d)[ABDEFI-NPR-VX-Z0-9]{7,8})$/,
+    regexp: /^((?=.*\d)[ABCDEFHI-NPR-VX-Z0-9]{7,8})$/,
     formatter(matches): string {
       return matches[1].substr(0, 3) + ' ' + matches[1].substr(3);
     },
