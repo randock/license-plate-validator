@@ -4,7 +4,7 @@ import { Pattern } from '../pattern';
 
 const patterns = [
   {
-    regexp: /^([A-Z0-9]{2,3})([0-9]{4})$/,
+    regexp: /^([A-Z0-9]{2,3})([0-9]{3,4})$/,
     formatter(matches): string {
       return matches[1] + ' ' + matches[2];
     },
