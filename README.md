@@ -11,6 +11,7 @@ This package provides validators for the following countries:
 - CZ
 - CH
 - IT
+- PL
 
 The easiest way to use the package is as follows.
 

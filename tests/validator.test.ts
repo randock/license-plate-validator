@@ -18,12 +18,16 @@ const licensePlateTests = [
     license: '53FSJB',
     valid: true,
     formats: ['53-FS-JB'],
-  },
-    {
+  }, {
     country: 'NL',
     license: 'TP336V',
     valid: true,
     formats: ['TP-336-V'],
+  }, {
+    country: 'PL',
+    license: 'PKL38000',
+    valid: true,
+    formats: ['PKL 38000'],
   },
 ];
 

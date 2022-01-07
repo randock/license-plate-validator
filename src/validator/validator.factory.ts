@@ -8,6 +8,7 @@ import { Validator as FrValidator } from './fr/validator';
 import { Validator as CzValidator } from './cz/validator';
 import { Validator as ChValidator } from './ch/validator';
 import { Validator as ItValidator } from './it/validator';
+import { Validator as PlValidator } from './pl/validator';
 
 export class ValidatorFactory {
   static forCountry(country: string): ValidatorInterface {
@@ -30,9 +31,10 @@ export class ValidatorFactory {
         return new ChValidator();
       case 'FR':
         return new FrValidator();
-
+      case 'PL':
+        return new PlValidator();
       default:
-        throw new Error('No validator defined for this country.');
+        throw new Error(`No validator defined for this country: ${country}.`);
     }
   }
 }
