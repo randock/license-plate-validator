@@ -3,7 +3,14 @@ import { Pattern } from './pattern';
 export abstract class AbstractValidator {
   constructor(private readonly patterns: Pattern[]) {}
 
-  static normalizeLicensePlateNumber(licensePlateNumber: string): string {
+  static normalizeLicensePlateNumber(
+    pattern: Pattern,
+    licensePlateNumber: string
+  ): string {
+    if (pattern.normalizer !== undefined) {
+      return pattern.normalizer(licensePlateNumber);
+    }
+
     return licensePlateNumber.toUpperCase().replace(/·|-|_|\.|:|,|;|\s/g, '');
   }
 
@@ -14,12 +21,15 @@ export abstract class AbstractValidator {
       );
     }
 
-    const normalizedLicensePlateNumber =
-      AbstractValidator.normalizeLicensePlateNumber(licensePlateNumber);
-
     const formats = [];
 
-    this.patterns.forEach((pattern) => {
+    this.patterns.forEach((pattern: Pattern) => {
+      const normalizedLicensePlateNumber =
+        AbstractValidator.normalizeLicensePlateNumber(
+          pattern,
+          licensePlateNumber
+        );
+
       const matches = normalizedLicensePlateNumber.match(pattern.regexp);
       if (matches !== null) {
         formats.push(pattern.formatter(matches));
@@ -30,11 +40,14 @@ export abstract class AbstractValidator {
   }
 
   validate(licensePlateNumber: string): boolean {
-    const normalizedLicensePlateNumber =
-      AbstractValidator.normalizeLicensePlateNumber(licensePlateNumber);
-
     let valid = false;
     this.patterns.forEach((pattern) => {
+      const normalizedLicensePlateNumber =
+        AbstractValidator.normalizeLicensePlateNumber(
+          pattern,
+          licensePlateNumber
+        );
+
       const matches = normalizedLicensePlateNumber.match(pattern.regexp);
       valid = valid || matches !== null;
     });

@@ -23,6 +23,15 @@ const patterns = [
       return matches[1] + ' ' + matches[2] + ' ' + matches[3];
     },
   },
+  {
+    regexp: /^(0)-?([0-9]{2,3})-([0-9]{1,3})$/,
+    formatter(matches): string {
+      return matches[1] + ' ' + matches[2] + '-' + matches[3];
+    },
+    normalizer(licensePlateNumber: string): string {
+      return licensePlateNumber.toUpperCase().replace(/·|_|\.|:|,|;|\s/g, '');
+    },
+  },
 ];
 
 export class Validator extends AbstractValidator implements ValidatorInterface {
