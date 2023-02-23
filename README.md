@@ -12,6 +12,7 @@ This package provides validators for the following countries:
 - CH
 - IT
 - PL
+- UA
 
 The easiest way to use the package is as follows.
 

@@ -43,6 +43,46 @@ const licensePlateTests = [
     valid: true,
     formats: ['0 107-1'],
   },
+  {
+    country: 'UA',
+    license: 'AA5381AP',
+    valid: true,
+    formats: ['AA 5381 AP'],
+  },
+  {
+    country: 'UA',
+    license: 'XX5381AP',
+    valid: false,
+  },
+  {
+    country: 'UA',
+    license: '06202AP',
+    valid: true,
+    formats: ['062-02 AP'],
+  },
+  {
+    country: 'UA',
+    license: 'c8428IC',
+    valid: true,
+    formats: ['C8428 IC'],
+  },
+  {
+    country: 'UA',
+    license: 'D123456',
+    valid: true,
+    formats: ['D 123 456'],
+  },
+  {
+    country: 'UA',
+    license: '11BB0714',
+    valid: true,
+    formats: ['11BB 0714'],
+  },
+  {
+    country: 'UA',
+    license: '30BB0714',
+    valid: false,
+  },
 ];
 
 describe('validate', function () {
