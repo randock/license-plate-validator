@@ -5,7 +5,7 @@ import { Pattern } from '../pattern';
 const patterns = [
   {
     regexp:
-      /^(AK|AB|AC|AE|AH|AM|AO|AP|AT|AI|AA|BA|BB|BC|BE|BH|BI|BK|BM|BO|AX|BT|BX|CA|CB|CE|CH)([0-9]{4})([A-Z]{2})$/,
+      /^(AA|KA|AB|KB|AC|KC|AE|KE|AH|KH|AI|KI|AK|KK|AM|KM|AO|KO|AP|KP|AT|KT|AX|KX|BA|HA|BB|HB|BC|HC|BE|HE|BH|HH|BI|HI|BK|HK|BM|HM|BO|HO|BP|HP|BT|HT|BX|HX|CA|IA|CB|IB|CC|IC|CE|IE|CH|IH|II)([0-9]{4})([A-Z]{2})$/,
     formatter(matches): string {
       return matches[1] + ' ' + matches[2] + ' ' + matches[3];
     },
