@@ -39,6 +39,12 @@ const licensePlateTests = [
   },
   {
     country: 'DE',
+    license: 'SIMD1923',
+    valid: true,
+    formats: ['SIM D 1923', 'SI MD 1923'],
+  },
+  {
+    country: 'DE',
     license: '0-107-1',
     valid: true,
     formats: ['0 107-1'],
@@ -82,6 +88,12 @@ const licensePlateTests = [
     country: 'UA',
     license: '30BB0714',
     valid: false,
+  },
+  {
+    country: 'CZ',
+    license: '2SD5167',
+    valid: true,
+    formats: ['2SD 5167'],
   },
 ];
 

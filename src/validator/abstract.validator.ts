@@ -36,7 +36,7 @@ export abstract class AbstractValidator {
       }
     });
 
-    return formats;
+    return formats.filter((v, i, a) => a.indexOf(v) === i);
   }
 
   validate(licensePlateNumber: string): boolean {
