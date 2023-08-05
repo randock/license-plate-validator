@@ -57,7 +57,7 @@ const licensePlateTests = [
   },
   {
     country: 'UA',
-    license: 'XX5381AP',
+    license: 'ZZ5381AP',
     valid: false,
   },
   {
@@ -88,6 +88,12 @@ const licensePlateTests = [
     country: 'UA',
     license: '30BB0714',
     valid: false,
+  },
+  {
+    country: 'UA',
+    license: 'OO0010CC',
+    valid: true,
+    formats: ['OO 0010 CC'],
   },
   {
     country: 'CZ',
