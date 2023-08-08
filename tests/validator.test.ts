@@ -42,6 +42,18 @@ const licensePlateTests = [
     license: 'SIMD1923',
     valid: true,
     formats: ['SIM D 1923', 'SI MD 1923'],
+  }, 
+  {
+    country: 'DE',
+    license: 'LEVMS456E',
+    valid: true,
+    formats: ['LEV MS 456E'],
+  },
+  {
+    country: 'DE',
+    license: 'LEVMS456H',
+    valid: true,
+    formats: ['LEV MS 456H'],
   },
   {
     country: 'DE',
@@ -100,6 +112,17 @@ const licensePlateTests = [
     license: '2SD5167',
     valid: true,
     formats: ['2SD 5167'],
+  }, 
+  {
+    country: 'DE',
+    license: 'DO04197',
+    valid: true,
+    formats: ['DO 04197'],
+  },
+  {
+    country: 'DE',
+    license: 'DO02197',
+    valid: false,
   },
 ];
 
