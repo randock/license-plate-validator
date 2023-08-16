@@ -146,6 +146,12 @@ const licensePlateTests = [
     valid: true,
     formats: ['SW BUS 1'],
   },
+  {
+    country: 'AT',
+    license: 'W85598F',
+    valid: true,
+    formats: ['W 85598F']
+  }
 ];
 
 describe('validate', function () {
