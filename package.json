@@ -2,7 +2,7 @@
   "name": "@randock/license-plate-validator",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^27.4.0",
@@ -15,7 +15,7 @@
     "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write",
     "build": "tsc",
     "prepare": "yarn build",
-    "test": "jest",
+    "test": "jest --silent=false",
     "coverage": "jest --coverage"
   }
 }

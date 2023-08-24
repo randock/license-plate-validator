@@ -150,13 +150,96 @@ const licensePlateTests = [
     country: 'AT',
     license: 'W85598F',
     valid: true,
-    formats: ['W 85598F']
-  }
+    formats: ['W 85598F'],
+  },
+  {
+    country: 'PL',
+    license: 'KTAX12',
+    valid: true,
+    formats: ['KTA X12'],
+    comment: 'Custom License Plate',
+  },
+  {
+    country: 'PL',
+    license: 'P0X122',
+    valid: false,
+    comment: 'Custom License Plate (too many digits)',
+  },
+  {
+    country: 'PL',
+    license: 'P0X12',
+    valid: true,
+    formats: ['P0 X12'],
+    comment: 'Custom License Plate',
+  },
+  {
+    country: 'PL',
+    license: 'P0XXXX12',
+    valid: false,
+    comment: 'Custom License Plate (too long)',
+  },
+  {
+    country: 'PL',
+    license: 'P0X12X',
+    valid: false,
+    comment: 'Custom License Plate (digits before letters)',
+  },
+  {
+    country: 'PL',
+    license: 'P0XX',
+    valid: false,
+    comment: 'Custom License Plate (too short)',
+  },
+  {
+    country: 'PL',
+    license: 'P0234B',
+    valid: true,
+    formats: ['P0 234 B'],
+    comment: 'Testing plate',
+  },
+  {
+    country: 'PL',
+    license: 'X1234P56',
+    valid: true,
+    formats: ['X12 34P56'],
+    comment: 'Professional plate',
+  },
+  {
+    country: 'PL',
+    license: 'X1234L56',
+    valid: false,
+    comment: 'Professional plate (not P)',
+  },
+  {
+    country: 'PL',
+    license: 'P01234',
+    valid: true,
+    formats: ['P0 1234'],
+    comment: 'Export plate',
+  },
+  {
+    country: 'PL',
+    license: 'P0123J',
+    valid: true,
+    formats: ['P0 123J'],
+    comment: 'Export plate',
+  },
+  {
+    country: 'PL',
+    license: 'W123456',
+    valid: true,
+    formats: ['W 123456'],
+    comment: 'Diplomatic plate',
+  },
 ];
 
 describe('validate', function () {
   it('validates', function () {
     licensePlateTests.forEach((licensePlate) => {
+      console.debug(
+        `Testing license plate ${licensePlate.country}: ${licensePlate.license}`
+      );
+
       let validator = ValidatorFactory.forCountry(licensePlate.country);
 
       expect(validator.validate(licensePlate.license)).toBe(licensePlate.valid);
