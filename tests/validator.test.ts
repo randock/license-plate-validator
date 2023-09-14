@@ -138,13 +138,14 @@ const licensePlateTests = [
   {
     country: 'AT',
     license: 'SW621',
-    valid: false,
+    valid: true,
+    formats: ['S W621'],
   },
   {
     country: 'AT',
     license: 'SWBUS1',
     valid: true,
-    formats: ['SW BUS 1'],
+    formats: ['S WBUS1', 'SW BUS1'],
   },
   {
     country: 'AT',
@@ -230,6 +231,24 @@ const licensePlateTests = [
     valid: true,
     formats: ['W 123456'],
     comment: 'Diplomatic plate',
+  },
+  {
+    country: 'PL',
+    license: 'PY17014',
+    valid: true,
+    formats: ['PY 17014'],
+  },
+  {
+    country: 'PL',
+    license: 'PO5VS57',
+    valid: true,
+    formats: ['PO 5VS57'],
+  },
+  {
+    country: 'AT',
+    license: 'SN19216',
+    valid: true,
+    formats: ['S N19216'],
   },
 ];
 
