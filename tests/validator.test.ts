@@ -250,6 +250,24 @@ const licensePlateTests = [
     valid: true,
     formats: ['S N19216'],
   },
+  {
+    country: 'BE',
+    license: '1RAE123',
+    valid: true,
+    formats: ['1-RAE-123'],
+  },
+  {
+    country: 'BE',
+    license: 'TXAM817',
+    valid: true,
+    formats: ['T-XAM-817'],
+  },
+  {
+    country: 'BE',
+    license: 'SUPERMAN',
+    valid: true,
+    formats: ['SUPERMAN'],
+  },
 ];
 
 describe('validate', function () {

@@ -31,7 +31,10 @@ export abstract class AbstractValidator {
         );
 
       const matches = normalizedLicensePlateNumber.match(pattern.regexp);
-      if (matches !== null) {
+      if (
+        matches !== null &&
+        (formats.length === 0 || pattern.fallback !== true)
+      ) {
         formats.push(pattern.formatter(matches));
       }
     });
