@@ -268,6 +268,12 @@ const licensePlateTests = [
     valid: true,
     formats: ['SUPERMAN'],
   },
+  {
+    country: 'DE',
+    license: 'MUCM2023',
+    valid: true,
+    formats: ['MUC M 2023'],
+  },
 ];
 
 describe('validate', function () {
